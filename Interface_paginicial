@@ -19,20 +19,30 @@ frame = customtkinter.CTkFrame(janela_p, width=350, height=400)
 frame.pack(side=LEFT)
 
 texto_p = customtkinter.CTkLabel(master=frame, text="Bem-Vindo(a) a Biblioteca Virtual")
-texto_p.place(x=80, y=100)
+texto_p.place(x=80, y=70)
 
 #local de email
 texto = customtkinter.CTkLabel(frame,text="Seu E-mail:")
-texto.place(x=140,y=165)
+texto.place(x=135,y=115)
 email = customtkinter.CTkEntry(frame, placeholder_text="")
-email.place(x=100, y=190)
+email.place(x=100, y=140)
 
 #local de senha
 texto2 = customtkinter.CTkLabel(frame,text="Sua Senha:")
-texto2.place(x=140,y=220)
+texto2.place(x=135,y=170)
 senha = customtkinter.CTkEntry(frame, placeholder_text="",show="*")
-senha.place(x=100, y=245)
-
+senha.place(x=100, y=195)
+def pag():
+    print('')
 #botao login
+botao_l = customtkinter.CTkButton(frame, text="Login", command=pag())
+botao_l.place(x=100, y=265)
+def pag1():
+    print('')
+
+#botao cadastro
+botao_c = customtkinter.CTkButton(frame, text="Fazer Cadastro",command=pag1())
+botao_c.place(x=100,y=305)
+
 
 janela_p.mainloop()
