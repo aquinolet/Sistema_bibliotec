@@ -1,0 +1,25 @@
+import customtkinter
+from tkinter import *
+
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("dark-blue")
+
+janela_i = customtkinter.CTk()
+janela_i.geometry('500x700')
+janela_i.title('Página de cadastro de livros')
+janela_i.resizable(False, False)
+
+frame = customtkinter.CTkFrame(janela_i, width=460, height=660)
+frame.place(x=20,y=20)
+
+texto = customtkinter.CTkLabel(frame,text="Cadastro de livros")
+texto.place(x=175,y=20)
+texto1= customtkinter.CTkLabel(frame,text="Insira as seguintes informações sobre o livro")
+texto1.place(x=105,y=40)
+
+texto2 = customtkinter.CTkLabel(frame,text="Título do Livro:")
+texto2.place(x=183,y=80)
+titulo = customtkinter.CTkEntry(frame, placeholder_text="")
+titulo.place(x=158,y=110)
+
+janela_i.mainloop()
