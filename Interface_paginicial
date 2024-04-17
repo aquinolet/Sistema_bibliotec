@@ -1,0 +1,38 @@
+import customtkinter
+from tkinter import *
+
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("dark-blue")
+
+janela_p = customtkinter.CTk()
+janela_p.geometry("700x400")
+janela_p.title("Biblioteca Virtual - Página Inicial")
+janela_p.resizable(False, False)
+
+#Imagem da página principal
+img = PhotoImage(file="image.png")
+label_img = customtkinter.CTkLabel(janela_p, image=img)
+label_img.place(x=-50,y=-40)
+
+#frame
+frame = customtkinter.CTkFrame(janela_p, width=350, height=400)
+frame.pack(side=LEFT)
+
+texto_p = customtkinter.CTkLabel(master=frame, text="Bem-Vindo(a) a Biblioteca Virtual")
+texto_p.place(x=80, y=100)
+
+#local de email
+texto = customtkinter.CTkLabel(frame,text="Seu E-mail:")
+texto.place(x=140,y=165)
+email = customtkinter.CTkEntry(frame, placeholder_text="")
+email.place(x=100, y=190)
+
+#local de senha
+texto2 = customtkinter.CTkLabel(frame,text="Sua Senha:")
+texto2.place(x=140,y=220)
+senha = customtkinter.CTkEntry(frame, placeholder_text="",show="*")
+senha.place(x=100, y=245)
+
+#botao login
+
+janela_p.mainloop()
