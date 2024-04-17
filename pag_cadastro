@@ -1,0 +1,84 @@
+import customtkinter
+from tkinter import *
+
+customtkinter.set_appearance_mode("dark")
+customtkinter.set_default_color_theme("dark-blue")
+
+janela_cadastro = customtkinter.CTk()
+janela_cadastro.geometry("400x700")
+janela_cadastro.title("Página de cadastro")
+janela_cadastro.resizable(False,False)
+
+#frame
+frame1 = customtkinter.CTkFrame(janela_cadastro, width=360, height=660)
+frame1.pack(padx=20,pady=20)
+
+#titulo da página cadastro
+texto1 = customtkinter.CTkLabel(frame1,text="Cadastro")
+texto1.place(x=145,y=20)
+texto0 = customtkinter.CTkLabel(frame1,text="Insira suas informações pessoais:")
+texto0.place(x=80,y=40)
+
+#local de nome
+texto2 = customtkinter.CTkLabel(frame1,text="Nome:")
+texto2.place(x=100,y=85)
+nome = customtkinter.CTkEntry(frame1, placeholder_text="")
+nome.place(x=100, y=110)
+
+#local de email
+texto3 = customtkinter.CTkLabel(frame1,text="E-mail:")
+texto3.place(x=100,y=140)
+email = customtkinter.CTkEntry(frame1, placeholder_text="")
+email.place(x=100, y=165)
+
+#local de senha
+texto4 = customtkinter.CTkLabel(frame1,text="Senha:")
+texto4.place(x=100,y=195)
+senha = customtkinter.CTkEntry(frame1, placeholder_text="")
+senha.place(x=100, y=220)
+
+#local de data de nascimento
+texto5 = customtkinter.CTkLabel(frame1,text="Data de nascimento:")
+texto5.place(x=100,y=250)
+data = customtkinter.CTkEntry(frame1, placeholder_text="")
+data.place(x=100, y=275)
+
+#local de rua
+texto6 = customtkinter.CTkLabel(frame1,text="Rua:")
+texto6.place(x=100,y=305)
+rua = customtkinter.CTkEntry(frame1, placeholder_text="")
+rua.place(x=100, y=330)
+
+#local de bairro
+texto7 = customtkinter.CTkLabel(frame1,text="Bairro:")
+texto7.place(x=100,y=360)
+bairro = customtkinter.CTkEntry(frame1, placeholder_text="")
+bairro.place(x=100, y=385)
+
+#local de cidade
+texto8 = customtkinter.CTkLabel(frame1,text="Cidade:")
+texto8.place(x=100,y=415)
+cidade = customtkinter.CTkEntry(frame1, placeholder_text="")
+cidade.place(x=100, y=440)
+
+#local de estado
+texto9 = customtkinter.CTkLabel(frame1,text="Estado:")
+texto9.place(x=100,y=470)
+estado = customtkinter.CTkEntry(frame1, placeholder_text="")
+estado.place(x=100, y=495)
+
+#local de Cep
+texto10 = customtkinter.CTkLabel(frame1,text="CEP:")
+texto10.place(x=100,y=525)
+cep = customtkinter.CTkEntry(frame1, placeholder_text="")
+cep.place(x=100, y=550)
+
+def oi():
+    print(oi)
+
+#botao para cadastrar
+botao_final = customtkinter.CTkButton(frame1,text="Fazer Cadastro",command=oi)
+botao_final.place(x=100,y=600)
+
+
+janela_cadastro.mainloop()
